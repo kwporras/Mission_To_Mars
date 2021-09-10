@@ -32,13 +32,11 @@ def index():
 # , mars=mars) tells Python to use the "mars" collection in MongoDB.
 # This function is what links our visual representation of our work, our web app, to the code that powers it.
 
-# route for the web application "button"
-@app.route("/scrape")
-def scrape():
-   mars = mongo.db.mars
-   mars_data = scraping.scrape_all()
-   mars.update({}, mars_data, upsert=True)
-   return redirect('/', code=302)
+
+
+
+
+
 
 # This route will be the "button" of the web application,
 # the one that will scrape updated data when we tell it to from the homepage of our web app.
